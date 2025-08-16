@@ -9,6 +9,7 @@ const onSearch = () => {
         if (text.includes(filter)) {
             el.style.display = ""
             el.style.color = "red"
+            el.style.fontWeight = "bold"
         } else {
             el.style.display = "none"
         }

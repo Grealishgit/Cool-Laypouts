@@ -3,19 +3,25 @@ const onSearch = () => {
     const filter = input.value.toUpperCase();
 
     const listItems = document.querySelectorAll("#myList li");
+    if (!filter) {
+        listItems.forEach(el => {
+            el.style.display = ""
+        });
+        return;
+    }
 
     listItems.forEach(el => {
         const text = el.textContent.toUpperCase();
         if (text.includes(filter)) {
             el.style.display = ""
             el.style.color = "red"
-            el.style.fontWeight = "bold"
+            el.style.fontWeight = 500
         } else {
             el.style.display = "none"
         }
     });
 
-    console.log("Filter value", filter)
+    // console.log("Filter value", filter)
 }
 
 
@@ -37,7 +43,9 @@ const body = document.querySelector("body");
 const element = document.querySelector(".container");
 const light = document.getElementById("light");
 
+
 element.addEventListener("scroll", () => {
     const value = 255 - (((light.getBoundingClientRect().top - 8) / 200) * 255);
     body.style.backgroundColor = `rgb(${value},${value},${value})`
+
 })

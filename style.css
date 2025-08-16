@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 10px;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 10px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT',
+        Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    height: 200px;
+    width: 40px;
+    border-radius: 48%/10%;
+    overflow: scroll;
+    scrollbar-width: none;
+    box-shadow: 0px 0px 20px black;
+}
+
+.element {
+    height: 200px;
+    width: 50px;
+    background-color: rgb(72, 67, 67);
+}
+
+.element:nth-child(2) {
+    background-color: rgb(242, 219, 239);
+}
+
+.searchs {
+    border: 2px solid green;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    width: 600px;
+    background-color: rgb(249, 248, 248);
+}
+
+.searchs h2 {
+    color: red;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.searchs input {
+    width: 90%;
+    height: 30px;
+    border: 1px solid green;
+    border-radius: 8px;
+    padding-left: 5px;
+}
+
+.searchs p {
+    margin-top: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.lists {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+}
+
+.lists li {
+    align-items: center;
+    flex-direction: row;
+    width: 70px;
+    border: 1px solid;
+    margin-top: 5px;
+    border-radius: 3px;
+    justify-items: center;
+    list-style: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.lists li:hover {
+    cursor: pointer;
+    color: green;
+    border: 1px green solid;
+}
+
+.pop {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop button {
+    width: 100px;
+    height: 30px;
+    border: 1px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.popping {
+    position: relative;
+    flex-direction: column;
+    padding: 10px;
+    top: 130px;
+    left: 45%;
+    border: 1px solid green;
+    border-radius: 6px;
+    height: 90px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+
+}
+
+.popping button {
+    width: 80px;
+    height: 30px;
+}
+
+.popping .buton-tag {
+    display: flex;
+    margin-top: 10px;
+    gap: 4px;
+    flex-direction: row;
+}
+
+[popover]::backdrop {
+    backdrop-filter: blur(2px);
+}
+
+.buttonsa {
+    color: red;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.buttonsb {
+    color: green;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.gallery {
+    width: min(1000px, 100%);
+    margin: 10px auto;
+    columns: 3 300px;
+    column-gap: 1em;
+}
+
+img {
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.shape {
+    height: 200px;
+    width: 200px;
+    background-color: #77cce9;
+
+}
+
+.circle {
+    margin-top: 10px;
+    height: 200px;
+    width: 200px;
+    background-color: #e3620c;
+    clip-path: circle(40px at 0 0);
+}
+
+
+@media (max-width: 768px) {
+    .searchs {
+        width: 100%;
+    }
+}
